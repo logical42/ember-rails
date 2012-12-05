@@ -11,7 +11,7 @@ module Ember
 
       def create_view_files
         template 'view.js', File.join('app/assets/javascripts/views', class_path, "#{file_name}_view.js")
-        template 'view.handlebars', File.join('app/assets/javascripts/templates', class_path, "#{file_name}.handlebars")
+        template 'view.handlebars', File.join('app/assets/javascripts/templates', class_path, "#{file_name}.hjs")
         invoke('ember:controller', [ file_name ], options)
       end
 
