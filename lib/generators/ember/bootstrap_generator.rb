@@ -30,7 +30,7 @@ module Ember
       end
 
       def create_dir_layout
-        %W{models controllers views routes helpers templates}.each do |dir|
+        %W{models controllers views route_handlers helpers templates}.each do |dir|
           empty_directory "#{ember_path}/#{dir}"
           create_file "#{ember_path}/#{dir}/.gitkeep" unless options[:skip_git]
         end
@@ -41,7 +41,7 @@ module Ember
       end
 
       def create_router_file
-        template "router.js", "#{ember_path}/routes/app_router.js"
+        template "router.js", "#{ember_path}/router.js"
       end
 
       def create_store_file
