@@ -10,7 +10,7 @@ module Ember
       class_option :object, :type => :boolean, :default => false, :desc => "Create an Ember.ObjectController to represent a single object"
 
       def create_view_files
-        template 'route_handler.js', File.join('app/assets/javascripts/route_handlers', class_path, "#{file_name}_view.js")
+        template 'route_handler.js', File.join('app/assets/javascripts/route_handlers', class_path, "#{file_name}_route.js")
       end
     end
   end
